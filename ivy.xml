@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	<info organisation="org.opensextant" module="OpenSextantUtils"
+		status="test" />
+
+
+	<publications>
+		<artifact name="opensextant-utils" type="jar" />
+	</publications>
+
+	<dependencies>
+
+		<!-- some general stuff -->
+		<dependency org="commons-codec" name="commons-codec" rev="1.7" />
+		<dependency org="commons-io" name="commons-io" rev="2.4" />
+		<!-- all the logging stuff -->
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.5" />
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.5" />
+		<dependency org="org.slf4j" name="jcl-over-slf4j" rev="1.7.5"/>
+		<dependency org="log4j" name="log4j" rev="1.2.17" />
+
+		<!--  wordnet Extended JWNL and data -->
+		<dependency org="net.sf.extjwnl" name="extjwnl" rev="1.7.1"/>
+		<dependency org="net.sf.extjwnl" name="extjwnl-data-wn31" rev="1.1"/>
+            
+        <!-- GATE core but just to get MorphAdorner -->    
+         <dependency org="uk.ac.gate" name="gate-core" rev="7.1" transitive ="false"/>   
+            
+         <!-- Jackson to serialize/deserialize for persistence-->   
+       	<dependency org="org.codehaus.jackson" name="jackson-mapper-asl" rev="1.9.13"  />     
+            
+            
+         <dependency org="org.elasticsearch" name="elasticsearch" rev="1.2.0"/>
+            
+            
+         <dependency org="org.opensextant" name="OpenSextantToolbox" rev="2.1"/> 
+            
+            
+		<!-- exclude other projects' source -->
+		<!--exclude type="javadoc" ext="jar" /-->
+		<!--exclude type="source" ext="jar" /-->
+
+	</dependencies>
+
+
+</ivy-module>
